@@ -1,6 +1,6 @@
 {
   "name": "hexo-renderer-kramed",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Markdown renderer plugin for Hexo with kramed engine",
   "main": "index",
   "scripts": {
