@@ -3,10 +3,10 @@
 var should = require('chai').should(); // eslint-disable-line
 var util = require('hexo-util');
 
-describe('Marked renderer', function() {
+describe('Kramed renderer', function() {
   var ctx = {
     config: {
-      marked: {}
+      kramed: {}
     }
   };
 

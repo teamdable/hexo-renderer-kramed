@@ -1,13 +1,45 @@
-# hexo-renderer-marked
+# hexo-renderer-kramed
 
-[![Build Status](https://travis-ci.org/hexojs/hexo-renderer-marked.svg?branch=master)](https://travis-ci.org/hexojs/hexo-renderer-marked)  [![NPM version](https://badge.fury.io/js/hexo-renderer-marked.svg)](http://badge.fury.io/js/hexo-renderer-marked) [![Coverage Status](https://img.shields.io/coveralls/hexojs/hexo-renderer-marked.svg)](https://coveralls.io/r/hexojs/hexo-renderer-marked?branch=master)
+[![Build Status](https://travis-ci.org/hexojs/hexo-renderer-kramed.svg?branch=master)](https://travis-ci.org/hexojs/hexo-renderer-kramed)  [![NPM version](https://badge.fury.io/js/hexo-renderer-kramed.svg)](http://badge.fury.io/js/hexo-renderer-kramed) [![Coverage Status](https://img.shields.io/coveralls/hexojs/hexo-renderer-kramed.svg)](https://coveralls.io/r/hexojs/hexo-renderer-kramed?branch=master)
 
-Add support for [Markdown]. This plugin uses [marked] as render engine.
+This plugin uses [kramed] but not [marked] as render engine, it is a fork of [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked). You need to uninstall hexo-renderer-marked to avoid conflicts.
+
+## Why use [kramed]?
+
+Just for the support of mathjax. I've modified the inline math format, like this example below:
+
+```
+`$\sigma$`
+```
+
+But this renderer will only wrap your inline tex and diplay tex with a `<script>` tag, to fully enable mathjax, you need to add javascript in your theme, what I did in my theme [hexo-theme-paperbox](https://github.com/sun11/hexo-theme-paperbox) is:
+
+```html
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    menuSettings: {
+      zoom: "None"
+    },
+    showMathMenu: false,
+    jax: ["input/TeX","output/CommonHTML"],
+    extensions: ["tex2jax.js"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script>
+```
 
 ## Installation
 
 ``` bash
-$ npm install hexo-renderer-marked --save
+$ npm uninstall hexo-renderer-marked --save
+$ npm install hexo-renderer-kramed --save
 ```
 
 - Hexo 3: >= 0.2
@@ -18,7 +50,7 @@ $ npm install hexo-renderer-marked --save
 You can configure this plugin in `_config.yml`.
 
 ``` yaml
-marked:
+kramed:
   gfm: true
   pedantic: false
   sanitize: false
@@ -38,3 +70,4 @@ marked:
 
 [Markdown]: http://daringfireball.net/projects/markdown/
 [marked]: https://github.com/chjj/marked
+[kramed]: https://github.com/GitbookIO/kramed
