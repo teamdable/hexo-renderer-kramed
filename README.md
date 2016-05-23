@@ -1,6 +1,6 @@
 # hexo-renderer-kramed
 
-[![Build Status](https://travis-ci.org/hexojs/hexo-renderer-kramed.svg?branch=master)](https://travis-ci.org/hexojs/hexo-renderer-kramed)  [![NPM version](https://badge.fury.io/js/hexo-renderer-kramed.svg)](http://badge.fury.io/js/hexo-renderer-kramed)
+[![Build Status](https://travis-ci.org/sun11/hexo-renderer-kramed.svg?branch=master)](https://travis-ci.org/sun11/hexo-renderer-kramed)  [![NPM version](https://badge.fury.io/js/hexo-renderer-kramed.svg)](http://badge.fury.io/js/hexo-renderer-kramed)
 
 This plugin uses [kramed] but not [marked] as render engine, it is a fork of [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked). You need to uninstall hexo-renderer-marked to avoid conflicts.
 
