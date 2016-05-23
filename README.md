@@ -1,10 +1,10 @@
 # hexo-renderer-kramed
 
-[![Build Status](https://travis-ci.org/hexojs/hexo-renderer-kramed.svg?branch=master)](https://travis-ci.org/hexojs/hexo-renderer-kramed)  [![NPM version](https://badge.fury.io/js/hexo-renderer-kramed.svg)](http://badge.fury.io/js/hexo-renderer-kramed) [![Coverage Status](https://img.shields.io/coveralls/hexojs/hexo-renderer-kramed.svg)](https://coveralls.io/r/hexojs/hexo-renderer-kramed?branch=master)
+[![Build Status](https://travis-ci.org/hexojs/hexo-renderer-kramed.svg?branch=master)](https://travis-ci.org/hexojs/hexo-renderer-kramed)  [![NPM version](https://badge.fury.io/js/hexo-renderer-kramed.svg)](http://badge.fury.io/js/hexo-renderer-kramed)
 
 This plugin uses [kramed] but not [marked] as render engine, it is a fork of [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked). You need to uninstall hexo-renderer-marked to avoid conflicts.
 
-## Why use [kramed]?
+## Why use kramed?
 
 Just for the support of mathjax. I've modified the inline math format, like this example below:
 
@@ -12,7 +12,7 @@ Just for the support of mathjax. I've modified the inline math format, like this
 `$\sigma$`
 ```
 
-But this renderer will only wrap your inline tex and diplay tex with a `<script>` tag, to fully enable mathjax, you need to add javascript in your theme, what I did in my theme [hexo-theme-paperbox](https://github.com/sun11/hexo-theme-paperbox) is:
+But this renderer will only wrap your inline tex and display tex with a `<script>` tag, to fully enable mathjax, you need to add some js code in your theme, what I did in my theme [hexo-theme-paperbox](https://github.com/sun11/hexo-theme-paperbox) is:
 
 ```html
 <script type="text/x-mathjax-config">
