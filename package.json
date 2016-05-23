@@ -1,6 +1,6 @@
 {
   "name": "hexo-renderer-kramed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Markdown renderer plugin for Hexo with kramed engine",
   "main": "index",
   "scripts": {
@@ -12,7 +12,7 @@
   "directories": {
     "lib": "./lib"
   },
-  "repository": "hexojs/hexo-renderer-kramed",
+  "repository": "sun11/hexo-renderer-kramed",
   "keywords": [
     "hexo",
     "markdown",
